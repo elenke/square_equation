@@ -11,19 +11,17 @@ public class Koef {
 
     public void input() {
 
-        // this.a = Double.valueOf(JOptionPane.showInputDialog("Введите коэф. А"));
-        //this.b = Double.valueOf(JOptionPane.showInputDialog("Введите коэф. B"));
-        //this.c = Double.valueOf(JOptionPane.showInputDialog("Введите коэф. C"));
-        str=String.valueOf(JOptionPane.showInputDialog("Введите коэф. А"));
-        if (str.matches("[0-9]*")) {
+            str=String.valueOf(JOptionPane.showInputDialog("Введите коэф. А"));
+        if (str.matches("(-|\\+)?[0-9]+(\\.[0-9]+)?")) {
             this.a=Double.parseDouble(str);
+           // System.out.println("введенное число " + a );
         }
         else {
             System.out.println("Введённые данные не являются числом!!! " + str );
             System.exit(0);
         }
         str=String.valueOf(JOptionPane.showInputDialog("Введите коэф. B"));
-        if (str.matches("[0-9]*")) {
+        if (str.matches("(-|\\+)?[0-9]+(\\.[0-9]+)?")) {
             this.b=Double.parseDouble(str);
         }
         else {
@@ -31,7 +29,7 @@ public class Koef {
             System.exit(0);
         }
         str=String.valueOf(JOptionPane.showInputDialog("Введите коэф. C"));
-        if (str.matches("[0-9]*")) {
+        if (str.matches("(-|\\+)?[0-9]+(\\.[0-9]+)?")) {
             this.c=Double.parseDouble(str);
         }
         else {
